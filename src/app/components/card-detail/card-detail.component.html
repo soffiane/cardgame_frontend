@@ -1,0 +1,9 @@
+<div *ngIf="card">
+  <div class="card-body" style="width: 18rem;">
+  <img src="assets/img/{{card.img}}.png" class="card-img-top">
+  <div class="card-body">
+    <p class="card-text">{{card.valeur | uppercase}} de {{card.couleur | uppercase}}</p>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>
+</div>
