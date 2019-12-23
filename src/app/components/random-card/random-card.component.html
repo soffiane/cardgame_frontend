@@ -1,36 +1,20 @@
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card bg-dark my-5">
-        <div class="card-body">
-          <h2 class="card-title text-center text-white py-3">{{card.valeur | uppercase}} de {{card.couleur | uppercase}}</h2>
-          <div class="card-deck" style="width: 18rem;">
-            <img src="assets/img/{{card.img}}.png" class="card-img-top">
-          </div>
-          <ul class="text-center list-inline py-3">
-            <li class="list-inline-item">
-              <button (click)="goBack()">Retour</button>
-            </li>
-            <li class="list-inline-item">
-              <button (click)="getRandomCard()">Autre carte aléatoire</button>
-            </li>
-          </ul>
-        </div>
+<ng-container *ngIf="card">
+  <div class="container">
+    <div class="card text-center">
+      <div class="card-header">
+        Carte aléatoire
+      </div>
+      <img class="card-img-top smallimg mx-auto" src="assets/img/{{card.img}}.png" alt="Card image cap"
+        style="width: 18rem;">
+      <div class="card-block catCard">
+        <h4 class="card-title">{{card.valeur | uppercase}} de {{card.couleur | uppercase}}</h4>
+        <li class="list-inline-item">
+          <a (click)="goBack()" class="btn btn-primary">Retour</a>
+        </li>
+        <li class="list-inline-item">
+          <a (click)="getRandomCard()" class="btn btn-primary">Autre carte aléatoire</a>
+        </li>
       </div>
     </div>
   </div>
-</div> -->
-<div class="card-body" style="width: 18rem;">
-  <img src="assets/img/{{card.img}}.png" class="card-img-top">
-  <div class="card-body">
-    <p class="card-text">{{card.valeur | uppercase}} de {{card.couleur | uppercase}}</p>
-  </div>
-</div>
-<ul class="text-center list-inline py-3">
-  <li class="list-inline-item">
-    <button (click)="goBack()" >Retour</button>
-  </li>
-  <li class="list-inline-item">
-    <button (click)="getRandomCard()">Autre carte aléatoire</button>
-  </li>
-</ul>
+</ng-container>
